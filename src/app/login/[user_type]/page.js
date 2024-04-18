@@ -7,11 +7,8 @@ const Login = ({params}) => {
   
   const googleLogin = () => {
     // Replace with your Google OAuth 2.0 client ID and redirect URI
-    const clientId =
-      // "188888100839-1840iic8vn85kj85a28gqcn92262lblm.apps.googleusercontent.com";
-      "439027388814-q5knfou7tt7hdtlsejurcmjg6dcre7ta.apps.googleusercontent.com";
-    // const clientSecret = "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";
-    const clientSecret = "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";
+    const clientId = "439027388814-q5knfou7tt7hdtlsejurcmjg6dcre7ta.apps.googleusercontent.com";
+    const clientSecret = "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";
     const redirectUri = `${FRONTEND_URL}/redirect`;
     const authUrl = `https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=${clientId}&redirect_uri=${redirectUri}&scope=email%20profile`;
     window.location.href = authUrl;
