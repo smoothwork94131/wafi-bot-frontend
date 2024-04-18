@@ -1,4 +1,5 @@
 "use client";
+import { FRONTEND_URL } from "@/utils/const";
 import Image from "next/image";
 import { useEffect } from "react";
 const Login = ({params}) => {
@@ -8,10 +9,10 @@ const Login = ({params}) => {
     // Replace with your Google OAuth 2.0 client ID and redirect URI
     const clientId =
       // "188888100839-1840iic8vn85kj85a28gqcn92262lblm.apps.googleusercontent.com";
-      "120362233982-h7gv79n7ap48v7k9s9t8kqml00auhbo4.apps.googleusercontent.com";
+      "439027388814-q5knfou7tt7hdtlsejurcmjg6dcre7ta.apps.googleusercontent.com";
     // const clientSecret = "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";
     const clientSecret = "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";
-    const redirectUri = "https://wafi-six.vercel.app/redirect";
+    const redirectUri = `${FRONTEND_URL}/redirect`;
     const authUrl = `https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=${clientId}&redirect_uri=${redirectUri}&scope=email%20profile`;
     window.location.href = authUrl;
   };
